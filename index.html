@@ -23,6 +23,28 @@
     </head>
 
     <body class="bg-gradient-to-br from-blue-900 via-gray-800 to-gray-900 text-white">
+
+        <header class="bg-blue-900 shadow-lg sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo / Site Name -->
+                    <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-extrabold text-white tracking-wide">The English Park</a>
+                    </div>
+            
+                    <!-- Navigation Links -->
+                    <nav class="hidden md:flex space-x-4">
+                    <a href="#about" class="px-4 py-2 rounded-xl bg-amber-400 text-black hover:bg-amber-300 hover:shadow-md transition-all duration-200">About</a>
+                    <a href="#services" class="px-4 py-2 rounded-xl bg-emerald-400 text-black hover:bg-emerald-300 hover:shadow-md transition-all duration-200">Services</a>
+                    <a href="#faculty" class="px-4 py-2 rounded-xl bg-rose-400 text-black hover:bg-rose-300 hover:shadow-md transition-all duration-200">Faculty</a>
+                    <a href="#alumni" class="px-4 py-2 rounded-xl bg-orange-400 text-black hover:bg-orange-300 hover:shadow-md transition-all duration-200">Alumni</a>
+                    <a href="#contact" class="px-4 py-2 rounded-xl bg-violet-400 text-black hover:bg-violet-300 hover:shadow-md transition-all duration-200">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+          
+                    
         
         <!-- Hero Section -->
         <section class="h-screen bg-[url('assets/images/Background.jpg')] bg-cover bg-center bg-fixed relative flex items-center justify-center text-white text-center py-20">
@@ -45,7 +67,7 @@
         <div class="space-y-12 p-8 max-w-5xl mx-auto">
 
             <!-- About Section -->
-            <section class="py-20">
+            <section class="py-20" id="about">
                 <h2 class="text-4xl font-bold mb-12 mt-12 text-slate-200">About Us</h2>
                 <div class="space-y-6 text-lg leading-relaxed text-justify">
                     <p><strong>Welcome to The English Park</strong> – where learning meets guidance, and every student is empowered to succeed.</p><br>
@@ -53,12 +75,11 @@
                     <p>At The English Park, we believe in <strong>quality over quantity</strong>. That’s why we keep our <strong>batches small</strong>, ensuring each student gets personalized attention and support. Our approach blends strong fundamentals with practical application through <strong>regular doubt-clearing sessions</strong>, <strong>mock tests</strong>, and <strong>individual progress tracking</strong>.</p><br>
                     <p>We offer both <strong>online and offline classes</strong>, giving students the flexibility to learn in the way that suits them best. Whether you're brushing up on grammar, mastering writing skills, or building a strong base for academic excellence, we’re here to guide you every step of the way.</p><br>
                     <p>Join <strong><em>The English Park</em></strong>—where your success is our mission.</p>
-                </div>
-                
+                </div>  
             </section>
 
             <!-- Services Section -->
-            <section class="py-20">
+            <section class="py-20" id="services">
                 <h2 class="text-4xl font-bold mb-12">Coaching Services</h2>
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 grid gap-8 md:grid-cols-2">
 
@@ -133,7 +154,7 @@
             </section>
 
             <!-- Faculty Section -->
-            <section class="py-20">
+            <section class="py-20" id="faculty">
                 <h2 class="text-4xl font-bold mb-12">Our Faculty</h2>
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 grid gap-8 md:grid-cols-3">
                     
@@ -166,7 +187,7 @@
             </section>
 
             <!-- Alumni Section -->
-            <section class="py-20">
+            <section class="py-20" id="alumni">
                 <h2 class="text-4xl font-bold mb-12">Our Alumni</h2>
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 grid gap-8 md:grid-cols-4">
             
