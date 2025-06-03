@@ -19,6 +19,9 @@
         </style>
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="assets/images/Favicon_Image_Android.png">
+        <!-- AOS CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     </head>
 
@@ -45,15 +48,15 @@
         </nav>
          
         <!-- Hero Section -->
-        <section class="h-screen bg-[url('assets/images/Background.jpg')] bg-cover bg-center bg-fixed relative flex items-center justify-center text-white text-center py-20">
+        <section class="h-screen bg-[url('assets/images/Background.jpg')] bg-cover bg-center bg-fixed relative flex items-center justify-center text-white text-center py-20" data-aos="fade-up">
     
             <!-- 🌈 Gradient Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
         
             <!-- 📄 Content on Top -->
             <div class="z-10 p-8">
-                <h1 class="text-6xl md:text-8xl font-bold text-white drop-shadow-xl">THE ENGLISH <br/> PARK</h1>
-                <p class="mt-4 text-base sm:text-lg md:text-xl text-white text-center">Specialized coaching to help you thrive in life.</p>
+                <h1 class="text-6xl md:text-8xl font-bold text-white drop-shadow-xl" data-aos="fade-up">THE ENGLISH <br/> PARK</h1>
+                <p class="mt-4 text-base sm:text-lg md:text-xl text-white text-center" data-aos="fade-right">Specialized coaching to help you thrive in life.</p>
                 <a href="#contact" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-full shadow-md transition duration-200">
                     Contact Us
                 </a>
@@ -208,7 +211,7 @@
                         <h3 class="text-2xl font-semibold text-black">Mrs. Anita</h3>
                         <p class="text-gray-600">(Managing Director)</p>
                         <p class="text-gray-600">Hindi and Sanskrit</p>
-                        <p class="text-gray-600">Extenxive Experience</p>
+                        <p class="text-gray-600">Extensive Experience</p>
                     </div>
                        
                     <!-- Faculty Member 3 -->
@@ -249,7 +252,7 @@
                     <!-- Alumni 3 -->
                     <div class="border p-4 rounded shadow bg-gray-100 text-center">
                         <img src="alumni3.jpg" alt="Alumni Name" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover" />
-                        <h3 class="text-xl font-semibold text-black"></h3>
+                        <h3 class="text-xl font-semibold text-black">Coming Soon</h3>
                         <p class="text-gray-500 text-sm"></p>
                         <p class="mt-3 text-gray-600 text-sm italic">
                             ""
@@ -259,7 +262,7 @@
                     <!-- Alumni 4 -->
                     <div class="border p-4 rounded shadow bg-gray-100 text-center">
                         <img src="alumni3.jpg" alt="Alumni Name" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover" />
-                        <h3 class="text-xl font-semibold text-black"></h3>
+                        <h3 class="text-xl font-semibold text-black">You can be next...</h3>
                         <p class="text-gray-500 text-sm"></p>
                         <p class="mt-3 text-gray-600 text-sm italic">
                             ""
@@ -291,21 +294,12 @@
                                                 
                     <a href="https://maps.app.goo.gl/QSMfpdWcByEDCDZm8" 
                         target="_blank" 
-                        class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-200">
-                        Get Directions
+                        class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-300 mt-4">
+                        View on Map
                     </a>
                 </div>
             </section>
         </div>
-        
-        <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
         
         <script defer>
             document.addEventListener("DOMContentLoaded", () => {
@@ -343,6 +337,54 @@
             setInterval(nextSlide, 3000); // auto change every 3s
             showSlide(current); // init
             });
+        </script>
+
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            let index = 0;
+
+            function showSlide(i) {
+                slides.forEach((slide, idx) => {
+                    slide.classList.toggle('hidden', idx !== i);
+                    dots[idx].classList.toggle('bg-blue-600', idx === i);
+                    dots[idx].classList.toggle('bg-gray-400', idx !== i);
+                });
+            }
+
+            function nextSlide() {
+                index = (index + 1) % slides.length;
+                showSlide(index);
+            }
+
+            function prevSlide() {
+                index = (index - 1 + slides.length) % slides.length;
+                showSlide(index);
+            }
+
+            document.getElementById('next').addEventListener('click', nextSlide);
+            document.getElementById('prev').addEventListener('click', prevSlide);
+            dots.forEach((dot, i) => dot.addEventListener('click', () => {
+                index = i;
+                showSlide(index);
+            }));
+
+            showSlide(index);
+        </script>
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+        <!-- AOS JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
         </script>
 
         <script src="https://cdn.tailwindcss.com"></script>
