@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
+            padding: 30px;
+            background: linear-gradient(to bottom right, #1e3a8a, #1f2937, #111827); /* Tailwind color codes */
+        }
+
+        .payment-table {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: #2c2c2c;
+            color: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .payment-table td, .payment-table th {
+            padding: 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        .payment-table td:first-child {
+            font-weight: bold;
+            width: 420px;
+        }
+
+        .payment-table img.icon {
+            height: 30px;
+            vertical-align: middle;
+            
+        }
+
+        .payment-table a {
+            color: #ffae42;
+            text-decoration: none;
+        }
+
+        .payment-table a:hover {
+            text-decoration: underline;
+        }
+
+        .row-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .upi-row {
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+
+        .upi-row td {
+            border: none;
+        }
+
+        .upi-row .upi-id {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .upi-id-row {
+            display: flex;
+            flex-wrap: wrap; /* allows wrapping if screen is small */
+            gap: 20px;
+            align-items: center;
+        }
+
+        .upi-id {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table class="payment-table">
+        <tr>
+            <td>Account Name</td>
+            <td>ANITA DADHWAL</td>
+        </tr>
+        <tr>
+            <td>Bank Name</td>
+            <td><img src="assets/images/Bank_Logo.jpg" alt="Kotak Mahindra Bank" class="icon"> Kotak Mahindra Bank</td>
+        </tr>
+        <tr>
+            <td>Account No.</td>
+            <td>5020007055349</td>
+        </tr>
+        <tr>
+            <td>IFSC Code</td>
+            <td>HDFC0000363</td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td>Kirti Nagar</td>
+        </tr>
+        <tr>
+            <td>Online Payment link</td>
+            <td><a href="https://payu.in/pay/02856B3231F52F348212EB0BA2CD48F9" target="_blank">https://payu.in/pay/02856B3231F52F348212EB0BA2CD48F9</a></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="row-icons">
+                    <img src="assets/images/PhonePay_Logo.png" alt="PhonePe" class="icon">
+                        PhonePe /
+                    <img src="assets/images/GPay_Logo.png" alt="Google Pay" class="icon">
+                        GooglePay /
+                    <img src="assets/images/Paytm_Logo.jpg" alt="Paytm" class="icon">
+                        Paytm No.
+                </div>
+            </td>
+            <td>+91-7838275498</td>
+        </tr>
+        <tr class="upi-row">
+            <td><img src="assets/images/UPI_Logo.png" alt="UPI" class="icon"> UPI IDs</td>
+            <td>
+                <div class="upi-id-row">
+                    <div class="upi-id"><img src="assets/images/PhonePay_Logo.png" class="icon"> 7065740676@ybl</div>
+                    <strong>/</strong> 
+                    <div class="upi-id"><img src="assets/images/GPay_Logo.png" class="icon"> wsi.laxmi@okhdfcbank</div>
+                    <strong>/</strong> 
+                    <div class="upi-id"><img src="assets/images/Paytm_Logo.jpg" class="icon"> 7065740676@paytm</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
