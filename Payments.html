@@ -103,10 +103,68 @@
             background-color: #e89e30;
         }
 
+        .floating-contact {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        .contact-toggle img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-options {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-option {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 22px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        /* Individual color overrides */
+        .phone { background-color: #4a90e2; }     /* Blue */
+        .whatsapp { background-color: #25d366; } /* Green */
+        .email { background-color: #d32f2f; }     /* Red */
+
+        #toggle-contact:checked ~ .contact-options {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .contact-option img.icon-img {
+            width: 18px;   /* Decreased from 22px */
+            height: 18px;
+            filter: brightness(1000%);
+        }
+
     </style>
 
     <link rel="icon" type="image/png" href="assets/images/Favicon_Image_Android.png">
-    
+
 </head>
 <body>
 
@@ -161,6 +219,26 @@
             </td>
         </tr>
     </table>
+
+    <div class="floating-contact">
+        <input type="checkbox" id="toggle-contact" hidden>
+        <label for="toggle-contact" class="contact-toggle">
+            <img src="assets/images/Support_Icon.webp" alt="Support Icon">
+        </label>
+
+        <div class="contact-options">
+            <a href="tel:+917838275498" class="contact-option phone" title="Call">
+                <img src="assets/images/Phone.png" alt="Call" class="icon-img">
+            </a>
+            <a href="https://wa.me/+91-7838275498" target="_blank" class="contact-option whatsapp" title="WhatsApp">
+                <img src="assets/images/WhatsApp.webp" alt="WhatsApp" class="icon-img">
+            </a>
+            <a href="mailto:support@example.com" class="contact-option email" title="Email">
+                <img src="assets/images/Mail.png" alt="mail" class="icon-img">
+            </a>
+        </div>
+    </div>
+
 
     <button class="go-back-button" onclick="history.back()">⬅ Go Back</button>
 
