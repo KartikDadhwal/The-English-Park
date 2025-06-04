@@ -16,6 +16,29 @@
             body {
                 font-family: 'Inter', sans-serif;
             }
+
+            .payment-icon {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #d4af37; /* Gold circle */
+                color: white;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                z-index: 9999;
+            }
+
+            .payment-icon:hover {
+                background-color: #c19b2d;
+            }
+            
         </style>
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -47,6 +70,9 @@
             <a href="#contact" class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition duration-300 hover:bg-blue-800 hover:text-gray-100 shadow-md">Contact</a>
         </nav>
          
+        <a href="Payments.html" class="payment-icon" title="Go to Payment">
+            ₹
+        </a>
         <!-- Hero Section -->
         <section class="h-screen bg-[url('assets/images/Background.jpg')] bg-cover bg-center bg-fixed relative flex items-center justify-center text-white text-center py-20" data-aos="fade-up">
     
