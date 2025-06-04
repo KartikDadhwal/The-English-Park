@@ -84,6 +84,25 @@
             gap: 8px;
         }
 
+        .go-back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffae42;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .go-back-button:hover {
+            background-color: #e89e30;
+        }
+
     </style>
 </head>
 <body>
@@ -139,6 +158,8 @@
             </td>
         </tr>
     </table>
+
+    <button class="go-back-button" onclick="history.back()">⬅ Go Back</button>
 
 </body>
 </html>
